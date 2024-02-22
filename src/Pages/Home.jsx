@@ -1,3 +1,4 @@
+import PopularTours from "../Components/PopularTours"
 import heroVideo from "../assets/video/0221.mp4"
 
 
@@ -20,6 +21,7 @@ const Home = () => {
                 </div>
             </div>
         </div>
+        <PopularTours/>
 
         
     </div>

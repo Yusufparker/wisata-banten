@@ -1,8 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 body{
-  font-family: "Poppins";
+  font-family: "Montserrat";
+}
+
+.fs-12{
+  font-size: 12px;
+}
+
+.fs-14{
+  font-size: 14px;
+}
+
+.fs-16{
+  font-size: 16px;
 }
 
 body a{
@@ -40,6 +52,10 @@ nav .nav-list button{
   display: none;
 }
 
+nav.bg-black{
+  transition: background-color 1s ease;
+}
+
 nav .humberger{
   display: none;
 }
@@ -61,6 +77,11 @@ nav .humberger button:hover{
 
 .text-shadow{
   text-shadow: 2px 2px 4px #0000003d;
+}
+
+.text-shadow-lg{
+  text-shadow: 2px 2px 4px #000000;
+
 }
 
 .home .hero .input-grup input{
@@ -90,6 +111,47 @@ nav .humberger button:hover{
 }
 
 
+
+/* popular tour */
+.list-popular-tour{
+  gap: 25px;
+  display: flex;
+  justify-content: center;
+  /* overflow: visible; */
+}
+
+.list-popular-tour .item{
+  width: 300px;
+  background-color: rgb(0, 0, 0);
+
+  max-width: 60px;
+  border-radius: 20px;
+  height: 300px;
+  transition: all .4s;
+  position: relative;
+}
+
+.list-popular-tour .item:hover{
+  max-width: 300px;
+  transition: all .4s;
+}
+
+.list-popular-tour .item p{
+  margin: auto;
+  position: absolute    ;
+  bottom: 20px;
+  /* height:400px; */
+  transition: all .5s;
+  writing-mode: vertical-lr;
+  transform :rotate( 180deg );
+} 
+
+.list-popular-tour .item:hover p{
+  transform :rotate( 0 );
+  writing-mode: horizontal-tb;
+  left: 20px;
+  transition: all .5s;
+}
 
 @media screen and (max-width: 700px){
   .home .hero video{
@@ -174,5 +236,30 @@ nav .humberger button:hover{
   .home .hero .desc {
     width: 100%;
   }
+
+  .list-popular-tour {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .list-popular-tour .item{
+    max-width: none;
+    width: auto;
+    height: 200px;
+  }
+
+  .list-popular-tour .item p {
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    padding: 0 20px;
+  }
+
+  .list-popular-tour .item:hover p {
+    left: 0;
+    transform: scale(1.2);
+  }
+
+
   
 }
