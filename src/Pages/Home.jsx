@@ -102,21 +102,24 @@ const Home = () => {
 
         <div className="destinasi  mb-5">
             <div className="container">
-                <h2 className="fw-bold text-center text-warning" style={{fontSize:"60px"}} >Eksploras<i class="bi bi-geo-fill"></i></h2>
+                <h2 className="fw-bold text-center text-warning" style={{fontSize:"60px"}} >Eksploras<i className="bi bi-geo-fill"></i></h2>
                 <h1 className="fw-bold text-center mb-5" style={{fontSize:"80px"}}>Destinasi Impian</h1>
                 <div className="row">
                     {
                         tours.slice(0, 3).map(tour => (
-                            <Link className="col-md-4 card-destinasi mb-4 text-black" data-aos="zoom-in-up">
+                            <Link to={`/destinasi/${tour.id}`} className="col-md-4 card-destinasi mb-4 text-black" data-aos="zoom-in-up" key={tour.id}>
                                 <div className="image text-center">
                                     <img src={tour.image} alt="" className="w-100" />
                                 </div>
                                 <h5 className="mt-3 fw-bold">{tour.name}</h5>
-                                <p className="fs-13"><i class="bi bi-geo-alt-fill text-danger"></i> {tour.location}</p>
+                                <p className="fs-13"><i className="bi bi-geo-alt-fill text-danger"></i> {tour.location}</p>
                                 
                             </Link>
                         ))
                     }
+                </div>
+                <div className="text-center">
+                    <Link to='/destinasi' className="more">Lihat Selengkapnya</Link>
                 </div>
             </div>
         </div>

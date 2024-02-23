@@ -82,6 +82,7 @@ nav .humberger button:hover{
 
 .home .hero{
   height: 100vh;
+  background-color: #000000;
 }
 
 .text-shadow{
@@ -220,7 +221,7 @@ nav .humberger button:hover{
   overflow: hidden;
 }
 
-.about a{
+.about a, .home .destinasi .more{
   color: white;
   background-color: rgb(255, 191, 0);
   display: inline-block;
@@ -228,10 +229,11 @@ nav .humberger button:hover{
   margin-top: 20px;
 }
 
-.about a:hover{
+.about a:hover, .home .destinasi .more:hover{
   background-color: rgb(255, 123, 0);
   transition: all .4s;
 }
+
 
 
 
