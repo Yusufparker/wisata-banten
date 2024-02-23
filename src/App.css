@@ -5,6 +5,11 @@ body{
   font-family: "Montserrat";
 }
 
+::selection {
+  background-color: black;
+  color: yellow;
+}
+
 .fs-12{
   font-size: 12px;
 }
@@ -116,11 +121,18 @@ nav .humberger button:hover{
   left: 50%;
   transform: translateX(-50%);
   border-radius: 5px;
-  padding: 20px;
+  padding: 0;
   z-index: 100;
-  max-height: 200px;
+  max-height: 0;
   overflow-y: scroll;
   overflow-x: hidden;
+  transition: all .5s;
+}
+
+.home .hero .drop-search.active{
+  max-height: 200px;
+  padding: 20px;
+  transition: all .5;
 }
 
 
@@ -146,6 +158,7 @@ nav .humberger button:hover{
 .home .hero .drop-search::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
 
 
 
@@ -190,11 +203,65 @@ nav .humberger button:hover{
   transition: all .5s;
 }
 
-@media screen and (max-width: 700px){
+
+
+
+/* about */
+
+.about{
+  margin-top: 150px;
+}
+.about .image{
+  height: 500px;
+  overflow: hidden;
+}
+
+.about a{
+  color: white;
+  background-color: rgb(255, 191, 0);
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.about a:hover{
+  background-color: rgb(255, 123, 0);
+  transition: all .4s;
+}
+
+
+
+
+
+
+
+
+
+/* home - destinasi */
+.home .destinasi{
+  height: 500px;
+
+}
+
+
+
+
+
+
+
+
+/* tablet */
+@media screen and (max-width: 884px) {
   .home .hero video{
     height: 100% !important;
     width: auto !important;
   }
+
+}
+
+
+/* mobile */
+@media screen and (max-width: 700px){
 
   nav .nav-list button{
     position: absolute;
@@ -295,6 +362,27 @@ nav .humberger button:hover{
   .list-popular-tour .item:hover p {
     left: 0;
     transform: scale(1.2);
+  }
+
+
+  .about {
+    margin-top: 50px;
+  }
+
+  .about .image {
+    height: 400px;
+  }
+
+  .about   .desc{
+    margin-top: 30px;
+    padding: 20px;
+  }
+
+  .about h2{
+    font-size: 25px !important;
+  }
+  .about h1{
+    font-size: 50px  !important;
   }
 
 

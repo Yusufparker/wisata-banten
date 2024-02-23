@@ -18,6 +18,7 @@ const Home = () => {
 
     // console.log(tours);
 
+    // filter search 
     const handleSearchChange = (e) => {
         const term = e.target.value;
         setSearch(term);
@@ -33,6 +34,8 @@ const Home = () => {
         }
     };
 
+
+    // handle hilangkan drop
     const handleOnBlur = (e) => {
         e.preventDefault()
         setTimeout(() => {
@@ -56,7 +59,7 @@ const Home = () => {
                         <input type="text" className="w-100  border-0 shadow-lg " value={search} onBlur={handleOnBlur}  onFocus={() => setIsFocused(true)} onChange={handleSearchChange} />
                         <button className=" position-absolute border-0 bg-warning"><i className="bi bi-search"></i></button>
                     </div>
-                    <div className={`drop-search position-absolute bg-white text-black ${isFocused ? '' : 'd-none'}`}>
+                    <div className={`drop-search position-absolute bg-white text-black ${isFocused ? 'active' : ''}`}>
                         {
                             searchResults.length > 0 ?
                             searchResults.map(search =>(
@@ -71,8 +74,8 @@ const Home = () => {
                                 </Link>
                             ))
                             :
-                            <div className="fs-12 text-center">
-                                Kosong
+                            <div className="fs-12 text-secondary text-center fw-bold">
+                                "Tidak Ada Hasil Yang Ditemukan <i className="bi bi-search"></i>"
                             </div>
 
                         }
@@ -81,6 +84,26 @@ const Home = () => {
             </div>
         </div>
         <PopularTours/>
+        <div className="about  mb-5 container">
+            <div className="row d-flex justify-content-between">
+                <div className="col-md-5 rounded image" data-aos="zoom-in-up">
+                    <img src="img/menara banten senja.jpg" alt="menara banten" className="img-fluid"  />
+                </div>
+                <div className="col-md-6 d-flex align-items-center desc" data-aos="zoom-in-up">
+                    <div>
+                        <h2 style={{fontSize:"50px"}}  className="fw-bold text-warning">Tentang</h2>
+                        <h1 className="fw-bold" style={{fontSize:"80px"}}>Wisata Banten</h1>
+                        <p>Banten, provinsi yang kaya akan sejarah dan keindahan alam, merupakan destinasi yang menakjubkan bagi para pelancong. Dengan pesona alamnya yang menawan, warisan budayanya yang kaya, dan beragam atraksi wisatanya, Banten menawarkan pengalaman yang tak terlupakan bagi setiap pengunjung..</p>
+                        <Link to='/tentang'>Lihat Selengkapnya</Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="destinasi  mb-5">
+            
+        </div>
+        
 
         
     </div>
