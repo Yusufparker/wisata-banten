@@ -91,7 +91,7 @@ const Home = () => {
                 </div>
                 <div className="col-md-6 d-flex align-items-center desc" data-aos="zoom-in-up">
                     <div>
-                        <h2 style={{fontSize:"50px"}}  className="fw-bold text-warning">Tentang</h2>
+                        <h2 style={{fontSize:"60px"}}  className="fw-bold text-warning">Tentang</h2>
                         <h1 className="fw-bold" style={{fontSize:"80px"}}>Wisata Banten</h1>
                         <p>Banten, provinsi yang kaya akan sejarah dan keindahan alam, merupakan destinasi yang menakjubkan bagi para pelancong. Dengan pesona alamnya yang menawan, warisan budayanya yang kaya, dan beragam atraksi wisatanya, Banten menawarkan pengalaman yang tak terlupakan bagi setiap pengunjung..</p>
                         <Link to='/tentang'>Lihat Selengkapnya</Link>
@@ -101,7 +101,24 @@ const Home = () => {
         </div>
 
         <div className="destinasi  mb-5">
-            
+            <div className="container">
+                <h2 className="fw-bold text-center text-warning" style={{fontSize:"60px"}} >Eksploras<i class="bi bi-geo-fill"></i></h2>
+                <h1 className="fw-bold text-center mb-5" style={{fontSize:"80px"}}>Destinasi Impian</h1>
+                <div className="row">
+                    {
+                        tours.slice(0, 3).map(tour => (
+                            <Link className="col-md-4 card-destinasi mb-4 text-black" data-aos="zoom-in-up">
+                                <div className="image text-center">
+                                    <img src={tour.image} alt="" className="w-100" />
+                                </div>
+                                <h5 className="mt-3 fw-bold">{tour.name}</h5>
+                                <p className="fs-13"><i class="bi bi-geo-alt-fill text-danger"></i> {tour.location}</p>
+                                
+                            </Link>
+                        ))
+                    }
+                </div>
+            </div>
         </div>
         
 

@@ -39,7 +39,7 @@ const Navbar = () => {
                     <button onClick={handleToggleNav}><i className="bi bi-x-lg"></i></button>
                     <ul className="list-unstyled">
                         <li className="me-5 d-inline-block">
-                            <Link to="/" className="text-decoration-none text-white ">Beranda</Link>
+                            <Link to="/" className="text-decoration-none text-white active">Beranda</Link>
                         </li>
                         <li className="me-5  d-inline-block">
                             <Link to="/tentang" className="text-decoration-none text-white">Tentang</Link>

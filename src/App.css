@@ -52,6 +52,10 @@ nav .logo{
 
 }
 
+.nav-list a.active:before{
+  width: 100%;
+}
+
 
 nav .nav-list button{
   display: none;
@@ -235,17 +239,49 @@ nav .humberger button:hover{
 
 
 
-
-
 /* home - destinasi */
 .home .destinasi{
-  height: 500px;
+  margin-top: 100px;
 
 }
 
 
+.home .destinasi .card-destinasi .image{
+  overflow: hidden;
+  height: 200px;
+  position: relative;
+}
+
+.home .destinasi .card-destinasi .image::before{
+  content: 'Lihat Detail';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  left: 0;
+  top: 0;
+  background-color: #00000095;
+  position: absolute;
+}
 
 
+.home .destinasi .card-destinasi img{
+  transition: all .4s;
+
+}
+
+.home .destinasi .card-destinasi:hover img{
+  transform: scale(1.2);
+  transition: all .4s;
+}
+
+.home .destinasi .card-destinasi:hover .image::before{
+  opacity: 1;
+  z-index: 100;
+}
 
 
 
@@ -378,10 +414,10 @@ nav .humberger button:hover{
     padding: 20px;
   }
 
-  .about h2{
+  .about h2, .home .destinasi h2{
     font-size: 25px !important;
   }
-  .about h1{
+  .about h1, .home .destinasi h1{
     font-size: 50px  !important;
   }
 
