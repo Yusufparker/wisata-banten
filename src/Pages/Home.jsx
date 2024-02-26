@@ -92,7 +92,7 @@ const Home = () => {
                 <div className="col-md-6 d-flex align-items-center desc" data-aos="zoom-in-up">
                     <div>
                         <h2 style={{fontSize:"60px"}}  className="fw-bold text-warning">Tentang</h2>
-                        <h1 className="fw-bold" style={{fontSize:"80px"}}>Wisata Banten</h1>
+                        <h1 className="fw-bold" style={{fontSize:"65px"}}>Wisata Banten</h1>
                         <p>Banten, provinsi yang kaya akan sejarah dan keindahan alam, merupakan destinasi yang menakjubkan bagi para pelancong. Dengan pesona alamnya yang menawan, warisan budayanya yang kaya, dan beragam atraksi wisatanya, Banten menawarkan pengalaman yang tak terlupakan bagi setiap pengunjung..</p>
                         <Link to='/tentang'>Lihat Selengkapnya</Link>
                     </div>
@@ -103,7 +103,7 @@ const Home = () => {
         <div className="destinasi  mb-5">
             <div className="container">
                 <h2 className="fw-bold text-center text-warning" style={{fontSize:"60px"}} >Eksploras<i className="bi bi-geo-fill"></i></h2>
-                <h1 className="fw-bold text-center mb-5" style={{fontSize:"80px"}}>Destinasi Impian</h1>
+                <h1 className="fw-bold text-center mb-5" style={{fontSize:"65px"}}>Destinasi Impian</h1>
                 <div className="row">
                     {
                         tours.slice(0, 3).map(tour => (
