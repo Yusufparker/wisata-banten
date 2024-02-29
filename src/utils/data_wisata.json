@@ -47,5 +47,21 @@
         "location":"Lebak",
         "desc" : "Pulau Dua atau Pulau Burung menjadi destinasi wisata alam di Banten favorit para wisatawan karena di cagar alam seluas 30 Ha ini merupakan rumah bagi banyak burung. Setiap tahunnya, sekitar 60 jenis burung dari berbagai negara akan datang ke pulau ini, tepatnya pada bulan April hingga Agustus. Selain itu, di objek wisata di Banten ini juga terdapat berbagai macam jenis ikan laut, serta memiliki laut yang begitu indah. Untuk sampai ke destinasi wisata di Banten satu ini, kamu bisa menyewa perahu motor atau perahu tradisional. Jika kamu memilih untuk berjalan kaki sembari menikmati kelestarian alam di sekitarnya, kamu membutuhkan waktu 15 hingga 30 menit, melewati daerah pertambakan yang ada di Desa Sawah Luhur, Kasemen.",
         "populer" : true
+    },
+    {
+        "id" : "pulau-dua-25s2",
+        "name" : "Pulau Dua (Pulau Burung)",
+        "image" : "img/5.webp",
+        "location":"Serang",
+        "desc" : "Pulau Dua atau Pulau Burung menjadi destinasi wisata alam di Banten favorit para wisatawan karena di cagar alam seluas 30 Ha ini merupakan rumah bagi banyak burung. Setiap tahunnya, sekitar 60 jenis burung dari berbagai negara akan datang ke pulau ini, tepatnya pada bulan April hingga Agustus. Selain itu, di objek wisata di Banten ini juga terdapat berbagai macam jenis ikan laut, serta memiliki laut yang begitu indah. Untuk sampai ke destinasi wisata di Banten satu ini, kamu bisa menyewa perahu motor atau perahu tradisional. Jika kamu memilih untuk berjalan kaki sembari menikmati kelestarian alam di sekitarnya, kamu membutuhkan waktu 15 hingga 30 menit, melewati daerah pertambakan yang ada di Desa Sawah Luhur, Kasemen.",
+        "populer" : true
+    },
+    {
+        "id" : "pantai-sawarna-31s0",
+        "name" : "Pantai Sawarna",
+        "image" : "img/6.jpg",
+        "location":"Lebak",
+        "desc" : "Pulau Dua atau Pulau Burung menjadi destinasi wisata alam di Banten favorit para wisatawan karena di cagar alam seluas 30 Ha ini merupakan rumah bagi banyak burung. Setiap tahunnya, sekitar 60 jenis burung dari berbagai negara akan datang ke pulau ini, tepatnya pada bulan April hingga Agustus. Selain itu, di objek wisata di Banten ini juga terdapat berbagai macam jenis ikan laut, serta memiliki laut yang begitu indah. Untuk sampai ke destinasi wisata di Banten satu ini, kamu bisa menyewa perahu motor atau perahu tradisional. Jika kamu memilih untuk berjalan kaki sembari menikmati kelestarian alam di sekitarnya, kamu membutuhkan waktu 15 hingga 30 menit, melewati daerah pertambakan yang ada di Desa Sawah Luhur, Kasemen.",
+        "populer" : true
     }
 ]

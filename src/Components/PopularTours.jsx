@@ -7,7 +7,7 @@ import dataTour from "../utils/data_wisata.json"
 const CardList = ({data}) =>{
 
     return(
-        <Link className="item overflow-hidden" data-aos="zoom-in-up">
+        <Link to={`/destinasi/${data.id}`} className="item overflow-hidden" data-aos="zoom-in-up">
             <img src={data.image} alt="pantai carita" className="h-100" />
             <p className="fs-14 text-white text-shadow-lg">{data.name}</p>
         </Link>

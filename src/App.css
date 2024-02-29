@@ -286,6 +286,36 @@ nav .humberger button:hover{
 }
 
 
+/* gallery */
+.home .gallery{
+  margin-top: 130px;
+}
+
+
+/* contact */
+.contact form input{
+  outline: none;
+  padding:10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid black;
+}
+.berita .carousel-news{
+  padding-left: 70px;
+  overflow-x: auto;
+  gap: 20px;
+  -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+    scroll-behavior: smooth;
+}
+
+.berita .news-card{
+  width: 400px;
+  flex: 0 0 auto;
+}
+
 
 
 /* tablet */
@@ -294,6 +324,7 @@ nav .humberger button:hover{
     height: 100% !important;
     width: auto !important;
   }
+
 
 }
 
@@ -421,6 +452,19 @@ nav .humberger button:hover{
   }
   .about h1, .home .destinasi h1{
     font-size: 50px  !important;
+  }
+
+  .home .gallery .first-image {
+    height: auto !important;
+  }
+
+  .berita .carousel-news {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .berita .news-card {
+    width: 100%;
   }
 
 
