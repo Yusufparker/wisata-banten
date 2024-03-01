@@ -6,21 +6,23 @@ const api = "https://api-berita-indonesia.vercel.app/republika/terbaru/";
 const CardNews = lazy(() => import('../Components/CardNews'))
 
 
-function Spinner() {
-    return(
-        <div className="text-center mt-5 mb-5 pt-5 pb-5">
-            <div className="spinner-border text-primary" style={{width: "5rem", height: "5rem"}} role="status">
-                <span className="visually-hidden">Loading...</span>
+
+
+function SkeletonLoader() {
+    return (
+        <div className="news-card">
+            <div className="shadow-sm">
+                <div className="skeleton-loading" style={{ height: "200px" }}></div>
+                <span className="placeholder col-12 mt-3"></span>
+                <span className="placeholder w-75"></span>
             </div>
         </div>
-    )
-    
+    );
 }
-
-
 const BantenNews = () => {
     const [news, setNews] = useState([])
     const carouselRef = useRef(null);
+    const [loading, setLoading] = useState(true)
 
     useEffect(() =>{
         const fetchNews = async () =>{
@@ -29,6 +31,8 @@ const BantenNews = () => {
                 setNews(response.data.data.posts)
             } catch (error) {
                 console.log(error);
+            } finally{
+                setLoading(false)
             }
         }
 
@@ -51,13 +55,24 @@ const BantenNews = () => {
 
             </div>
             <div className="carousel-news d-flex mt-5" ref={carouselRef}>
-                <Suspense fallback={<Spinner/>}>
-                    {
-                        news.slice(0, 5).map((n, index) => (
-                            <CardNews n={n} key={index} />
-                        ))
-                    }
-                </Suspense>
+                {
+                    loading ? (
+                        <>
+                            <SkeletonLoader/>
+                            <SkeletonLoader/>
+                            <SkeletonLoader/>
+                        </>
+                    ) : (
+
+                    <Suspense fallback={<SkeletonLoader/>}>
+                        {
+                            news.slice(0, 5).map((n, index) => (
+                                <CardNews n={n} key={index} />
+                            ))
+                        }
+                    </Suspense>
+                    )
+                }
             </div>
         </div>
     )

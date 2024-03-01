@@ -7,14 +7,24 @@ import { Link } from "react-router-dom"
 
 const Contact = () =>{
     const [message,setMessage] = useState('')
+
+    const handleSubmit = ()  => {
+        const subject = encodeURIComponent(
+            "Pesan dari website Wisata Banten."
+        );
+        const body = encodeURIComponent(message);
+
+        window.location.href = `mailto:muhammadyusuf@yusufparker.com?subject=${subject}&body=${body}`;
+    }
+
     return(
         <div className="contact mt-5 mb-5">
             <div className="container">
                 <h1 className="text-center fw-bold"><span className="text-warning text-shadow">Hubungi</span> Kami</h1>
                 <p className="text-center">Ada pertanyaan? Jangan ragu untuk menghubungi kami!</p>
-                <form className="text-center mt-4">
+                <form className="text-center mt-4" onSubmit={handleSubmit}>
                     <div className="col-md-6 m-auto">
-                        <input type="text" className="w-100" value={message} onChange={(e) => setMessage(e.target.value)} />
+                        <input type="text" className="w-100" value={message} required onChange={(e) => setMessage(e.target.value)} />
                     </div>
                     <button className="mt-3 rounded border fs-14 ps-3 pe-3 pt-2 pb-2 btn btn-warning">Kirim Pesan</button>
 

@@ -321,6 +321,36 @@ nav .humberger button:hover{
 }
 
 
+.skeleton-loading {
+  background-color: #c6c6c6;
+  /* Warna latar belakang */
+  animation: skeleton-loading 1s infinite alternate;
+  /* Animasi loading */
+}
+
+
+
+
+@keyframes skeleton-loading {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+
+/* footer */
+footer .sosmed a{
+  color: black;
+  background-color: yellow;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
 
 /* tablet */
 @media screen and (max-width: 884px) {
