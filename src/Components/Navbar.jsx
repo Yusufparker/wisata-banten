@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 
 const Navbar = () => {
     const [navActive , setNavActive] = useState(false)
-
     const [scrollPosition, setScrollPosition] = useState(0);
+    const location = useLocation()
 
     useEffect(() => {
         const handleScroll = () => {
@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className={` fixed-top ${navBgClass}`}>
+        <nav className={` fixed-top ${navBgClass} ${location.pathname == "/tentang" ? 'bg-gelap' : ''} `}>
             <div className="container  p-3 d-flex align-items-center justify-content-between">
                 <div className="logo">
                     <Link className="text-white" to=""><h1 className="fs-4 fw-bold text-shadow">Wisata Banten<span className="fs-1 text-warning ms-1">.</span></h1></Link>
@@ -39,13 +39,13 @@ const Navbar = () => {
                     <button onClick={handleToggleNav}><i className="bi bi-x-lg"></i></button>
                     <ul className="list-unstyled">
                         <li className="me-5 d-inline-block">
-                            <Link to="/" className="text-decoration-none text-white active">Beranda</Link>
+                            <Link to="/" className={`text-decoration-none text-white text-shadow ${location.pathname == '/' ? 'active' : ''}`}>Beranda</Link>
                         </li>
                         <li className="me-5  d-inline-block">
-                            <Link to="/tentang" className="text-decoration-none text-white">Tentang</Link>
+                            <Link to="/tentang" className={`text-decoration-none text-white text-shadow  ${location.pathname.startsWith('/tentang') ? 'active' : ''}`}>Tentang</Link>
                         </li>
                         <li className="me-5  d-inline-block">
-                            <Link to="/destinasi" className="text-decoration-none text-white">Destinasi</Link>
+                            <Link to="/destinasi" className={`text-decoration-none text-white text-shadow ${location.pathname.startsWith('/destinasi') ? 'active' : ''}`}>Destinasi</Link>
                         </li>
                     </ul>
                 </div>

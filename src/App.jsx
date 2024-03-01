@@ -6,6 +6,8 @@ import './App.css'
 import Home from './Pages/Home'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer';
+import About from './Pages/About';
+import ProgressBar from './Components/ProgressBar';
 
 function App() {
   useEffect(() => {
@@ -14,13 +16,13 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<Home/>} />
-        </Routes>
-        <Footer/>
-      </Router>
+      <ProgressBar/>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home/>} />
+        <Route path='/tentang' element={<About/>} />
+      </Routes>
+      <Footer/>
     </>
   )
 }

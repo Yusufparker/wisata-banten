@@ -11,7 +11,7 @@ body{
 }
 
 .bg-gelap{
-  background-color: #131313;
+  background-color: #131313 !important;
 }
 
 .fs-12{
@@ -29,6 +29,7 @@ body{
 body a{
   text-decoration: none;
 }
+
 
 nav .logo{
   font-weight: bold;
@@ -65,7 +66,7 @@ nav .nav-list button{
   display: none;
 }
 
-nav.bg-dark{
+nav.bg-gelap{
   transition: background-color 1s ease;
 }
 
@@ -352,6 +353,34 @@ footer .sosmed a{
 }
 
 
+/* sub header */
+.sub-header{
+  height: 350px;
+  background-image: url("img/5.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sub-header .card-header{
+  bottom: -30px;
+  width: 400px;
+  right: 80px;
+}
+
+
+/* framr motion */
+.progress-bar-top {
+  position: fixed;
+  z-index: 100;
+  top: 85px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: yellow;
+  transform-origin: 0%;
+}
+
 /* tablet */
 @media screen and (max-width: 884px) {
   .home .hero video{
@@ -363,8 +392,31 @@ footer .sosmed a{
 }
 
 
+
+
+
+
+
+
 /* mobile */
 @media screen and (max-width: 700px){
+
+  .sub-header{
+    height: 250px;
+  }
+
+  .sub-header .card-header {
+    width: 200px;
+    padding: 20px !important;
+    font-size: 12px;
+    right: 15px;
+    bottom: -50px;
+  }
+  .progress-bar-top {
+    top: 73px;
+
+  }
+
 
   nav .nav-list button{
     position: absolute;
@@ -384,7 +436,7 @@ footer .sosmed a{
   }
 
   nav .nav-list{
-    background-color:rgba(255, 255, 255, 0.872);
+    background-color:rgb(255, 255, 255);
     filter: blur(0.1px);
     position: absolute  ;
     right: 0;
