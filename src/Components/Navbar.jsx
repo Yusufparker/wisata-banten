@@ -19,7 +19,7 @@ const Navbar = () => {
         };
     }, []);
 
-    const navBgClass = scrollPosition > 100 ? "bg-black" : "";
+    const navBgClass = scrollPosition > 100 ? "bg-gelap" : "";
 
     const handleToggleNav = () =>[
         setNavActive(!navActive)

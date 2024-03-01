@@ -34,7 +34,7 @@ const Contact = () =>{
 
 const Gallery = () =>{
     return(
-        <div className="gallery  mb-5 text-white bg-black p-3 pt-5 pb-5">
+        <div className="gallery  mb-5 text-white bg-gelap p-3 pt-5 pb-5">
             <div className="container">
                 <div className="row">
                     <div className="col-md-5 pe-4">

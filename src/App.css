@@ -10,6 +10,10 @@ body{
   color: yellow;
 }
 
+.bg-gelap{
+  background-color: #131313;
+}
+
 .fs-12{
   font-size: 12px;
 }
@@ -61,7 +65,7 @@ nav .nav-list button{
   display: none;
 }
 
-nav.bg-black{
+nav.bg-dark{
   transition: background-color 1s ease;
 }
 
