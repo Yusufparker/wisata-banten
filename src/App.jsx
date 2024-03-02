@@ -8,6 +8,7 @@ import Navbar from './Components/Navbar'
 import Footer from './Components/Footer';
 import About from './Pages/About';
 import ProgressBar from './Components/ProgressBar';
+import Destination from './Pages/Destination';
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/tentang' element={<About/>} />
+        <Route path='/destinasi' element={<Destination/>} />
       </Routes>
       <Footer/>
     </>

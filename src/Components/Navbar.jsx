@@ -27,7 +27,7 @@ const Navbar = () => {
 
     return (
         <>
-        <nav className={` fixed-top ${navBgClass} ${location.pathname == "/tentang" ? 'bg-gelap' : ''} `}>
+        <nav className={` fixed-top ${navBgClass} ${location.pathname !== "/" ? 'bg-gelap' : ''} `}>
             <div className="container  p-3 d-flex align-items-center justify-content-between">
                 <div className="logo">
                     <Link className="text-white" to=""><h1 className="fs-4 fw-bold text-shadow">Wisata Banten<span className="fs-1 text-warning ms-1">.</span></h1></Link>

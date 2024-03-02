@@ -11,7 +11,7 @@ body{
 }
 
 .bg-gelap{
-  background-color: #131313 !important;
+  background-color: #0b1215 !important;
 }
 
 .ff-serif{
@@ -19,7 +19,7 @@ body{
 }
 
 .fs-12{
-  font-size: 12px;
+  font-size: 12px !important;
 }
 
 .fs-14{
@@ -95,7 +95,7 @@ nav .humberger button:hover{
 
 .home .hero{
   height: 100vh;
-  background-color: #000000;
+  background-color: #0b1215;
 }
 
 .text-shadow{
@@ -438,9 +438,18 @@ footer .sosmed a{
 
 
 
+/* destination page */
+.destination-page .btn-more{
+  background-color: rgba(255, 213, 0, 0.434);
+}
 
-
-
+.destination-page input{
+  border: 0;
+  border-bottom: 1px solid rgb(55, 55, 55)  ;
+  outline: none;
+  color: #555;
+  padding: 5px;
+}
 
 
 
