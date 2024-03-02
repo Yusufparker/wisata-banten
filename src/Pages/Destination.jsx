@@ -5,12 +5,16 @@ import dataTour from "../utils/data_wisata.json"
 import { Link } from 'react-router-dom';
 
 
-function MapComponent({tours}) {
+function MapComponent({searchResults, data}) {
+    const tours = searchResults.length > 0 ? searchResults : data
+
     return (
         <MapContainer
             center={[-6.4456544, 105.7077133, 9]}
             zoom={8}
             style={{ height: "400px", width: "100%" }}
+            zoomControl={false}
+            scrollWheelZoom={false}
         >
             <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -43,6 +47,11 @@ const DestinationCard = ({tour}) =>{
                     </div>
                     <div className="col-md-6">
                         <h3 className='fw-bold'>{tour.name}</h3>
+                        <p className='fs-14'>
+                            <i className="bi bi-geo-alt-fill me-1 text-danger"></i>
+                            {tour.location}
+
+                        </p>
                         <p className='fs-14'>{tour.desc.substring(0,200)}...</p>
                         <Link className='btn btn-warning rounded-0 fs-12 mt-3 p-2 ps-4 pe-4 text-white' to={`/destinasi/${tour.id}`}>Lihat Detail</Link>
                     </div>
@@ -58,37 +67,67 @@ const Destination = () => {
     const [count,setCount] = useState(3)
     const [search, setSearch] = useState("");
     const [searchResults, setSearchResults] = useState([]);
-
-
     useEffect(() => {
         setTours(dataTour);
     }, []);
 
-    const handleSearchChange = (e) => {
-        const term = e.target.value;
-        setSearch(term);
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchTerm = urlParams.get("s");
+        if (searchTerm) {
+            setSearch(searchTerm);
+        }
+    }, []);
 
+    useEffect(() => {
+        const term = search;
         if (term.trim() === "") {
             setSearchResults([]);
         } else {
-            const filteredResults = tours.filter((tour) =>
-            tour.name.toLowerCase().includes(term.toLowerCase())
+            const filteredResults = tours.filter(
+                (tour) =>
+                // berdasarkan nama dan lokasi
+                tour.name.toLowerCase().includes(term.toLowerCase()) ||
+                tour.location.toLowerCase().includes(term.toLowerCase())
             );
-
             setSearchResults(filteredResults);
         }
-    };
+    }, [search, tours]);
+
+
+    // console.log(searchResults);
+
+
+    
+
+    const handleSearchChange = (e) => {
+    const term = e.target.value;
+    setSearch(term);
+
+    if (term.trim() === "") {
+        setSearchResults([]);
+    } else {
+        const filteredResults = tours.filter((tour) =>
+            // berdasarkan nama dan lokasi
+            tour.name.toLowerCase().includes(term.toLowerCase()) || 
+            tour.location.toLowerCase().includes(term.toLowerCase()) 
+        );
+
+        setSearchResults(filteredResults);
+    }
+};
+
 
 
     return (
         <div className="mt-5 pt-4 destination-page">
-            <MapComponent tours={tours}/>
+            <MapComponent searchResults={searchResults} data={tours} />
             <div className="container mt-5 mb-5">
                 <div className='row'>
                     <h2 className="fw-bold col-md-2">Destinasi</h2>
-                    <div className='col-md-10 d-flex align-items-center p-3 p-md-0'>
-                        <input type="text" className='w-100' placeholder='Cari Disini' value={search} onChange={handleSearchChange} />
-
+                    <div className='col-md-10 d-flex align-items-center p-3 p-md-0 position-relative'>
+                        <i className="bi bi-geo-alt-fill position-absolute"></i>
+                        <input type="text" className='w-100 ps-4' placeholder='Cari Disini' value={search} onChange={handleSearchChange} />
                     </div>
 
                 </div>

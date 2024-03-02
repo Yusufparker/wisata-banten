@@ -138,8 +138,10 @@ const Home = () => {
                     <h3  className="fw-bold text-shadow text-center">Panduan Wisata</h3>
                     <h3 className="fw-bold text-shadow text-center" style={{marginTop:'-10px'}}>Menggali Kekayaan Wisata Banten</h3>
                     <div className="input-grup mt-4   position-relative ">
-                        <input type="text" className="w-100  border-0 shadow-lg " value={search} onBlur={handleOnBlur}  onFocus={() => setIsFocused(true)} onChange={handleSearchChange} />
-                        <button className=" position-absolute border-0 bg-warning"><i className="bi bi-search"></i></button>
+                        <form action="/destinasi">
+                            <input type="text" className="w-100  border-0 shadow-lg " value={search} onBlur={handleOnBlur} required name="s"  onFocus={() => setIsFocused(true)} onChange={handleSearchChange} />
+                            <button className=" position-absolute border-0 bg-warning"><i className="bi bi-search"></i></button>
+                        </form>
                     </div>
                     <div className={`drop-search position-absolute bg-white text-black ${isFocused ? 'active' : ''}`}>
                         {
