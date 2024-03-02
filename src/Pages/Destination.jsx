@@ -13,6 +13,7 @@ function MapComponent({searchResults, data}) {
             center={[-6.4456544, 105.7077133, 9]}
             zoom={8}
             style={{ height: "400px", width: "100%" }}
+            zoomControl={false}
             scrollWheelZoom={false}
         >
             <TileLayer
