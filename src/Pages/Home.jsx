@@ -175,7 +175,7 @@ const Home = () => {
                     <div>
                         <h2 style={{fontSize:"60px"}}  className="fw-bold text-warning text-shadow">Tentang</h2>
                         <h1 className="fw-bold" style={{fontSize:"65px"}}>Wisata Banten</h1>
-                        <p className="fs-13">Banten, provinsi yang kaya akan sejarah dan keindahan alam, merupakan destinasi yang menakjubkan bagi para pelancong. Dengan pesona alamnya yang menawan, warisan budayanya yang kaya, dan beragam atraksi wisatanya, Banten menawarkan pengalaman yang tak terlupakan bagi setiap pengunjung..</p>
+                        <p className="fs-13">Banten, provinsi yang kaya akan sejarah dan keindahan alam, merupakan destinasi yang menakjubkan bagi para pelancong. Dengan pesona alamnya yang menawan, warisan budayanya yang kaya, dan beragam atraksi wisatanya, Banten menawarkan pengalaman yang...</p>
                         <Link to='/tentang'>Lihat Selengkapnya</Link>
                     </div>
                 </div>

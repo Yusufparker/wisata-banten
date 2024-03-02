@@ -14,6 +14,10 @@ body{
   background-color: #131313 !important;
 }
 
+.ff-serif{
+  font-family: serif;
+}
+
 .fs-12{
   font-size: 12px;
 }
@@ -24,6 +28,10 @@ body{
 
 .fs-16{
   font-size: 16px;
+}
+
+.fs-20{
+  font-size: 20px;
 }
 
 body a{
@@ -356,7 +364,7 @@ footer .sosmed a{
 /* sub header */
 .sub-header{
   height: 350px;
-  background-image: url("img/5.webp");
+  background-image: url("/img/5.webp");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -377,9 +385,66 @@ footer .sosmed a{
   left: 0;
   right: 0;
   height: 5px;
-  background: yellow;
+  background: rgba(255, 255, 0, 0.594);
   transform-origin: 0%;
 }
+
+
+
+
+
+
+
+/* about page */
+
+/* sub header */
+.sub-header{
+  height: 350px;
+  background-image: url("/img/5.webp");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.sub-header .card-header{
+  bottom: -30px;
+  width: 400px;
+  right: 80px;
+}
+
+.about-page h2{
+  position: relative;
+}
+
+.about-page h2::after{
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  background-color: yellow;
+  left: 0;
+  bottom: -10px;
+
+}
+
+.about-page .desc{
+  width: 500px;
+  bottom: -10px;
+  right: 40px;
+  /* border: 1px solid black; */
+  
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* tablet */
 @media screen and (max-width: 884px) {
@@ -388,6 +453,10 @@ footer .sosmed a{
     width: auto !important;
   }
 
+    .about-page .desc {
+      right: 10px;
+      width: 400px;
+    }
 
 }
 
@@ -401,6 +470,16 @@ footer .sosmed a{
 /* mobile */
 @media screen and (max-width: 700px){
 
+
+  .about-page .quotes{
+    height: 250px !important;
+  }
+
+  .about-page .desc {
+    right: 50%;
+    transform: translateX(50%);
+    width: 100%;
+  }
   .sub-header{
     height: 250px;
   }
