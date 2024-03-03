@@ -1,5 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import { Link } from "react-router-dom";
+import customMarkerIcon from './customMakerIcon';
 function MapComponent({searchResults, data}) {
     const tours = searchResults.length > 0 ? searchResults : data
 
@@ -18,7 +19,7 @@ function MapComponent({searchResults, data}) {
             />
             {
                 tours.map(tour=>(
-                    <Marker position={[tour.lat, tour.long]} key={tour.id}>
+                    <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon}>
                         <Popup>
                             <div  className='p-1'>
                                 <img src={tour.image} alt=""  className='w-100'/>
