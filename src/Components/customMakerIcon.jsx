@@ -3,8 +3,7 @@ delete L.Icon.Default.prototype._getIconUrl;
 
 const customMarkerIcon = new L.Icon({
     iconRetinaUrl: '/img/marker-icon-2x.png',
-    iconUrl: '/img/marker-icon.png',
-    shadowUrl: '/img/marker-shadow.png',
+    // iconUrl: '/img/marker-icon.png',
     iconSize: [25, 41],
     iconAnchor: [12, 41],
     popupAnchor: [1, -34],

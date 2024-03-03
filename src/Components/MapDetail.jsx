@@ -7,11 +7,33 @@ import RoutineMachine from "./RoutineMachine";
 import customMarkerIcon from "./customMakerIcon";
 
 
+
+const DistanceLoading = () =>{
+    return(
+        <di className="text-center mb-5 mt-3"  >
+            <div className="d-flex justify-content-center">
+                <div className="spinner-border" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <p className="fs-12 mt-2">Menghitung Jarak..</p>
+        </di>
+    )
+}
+
+
+
+
+
+
+
+
+
+
 const MapDetail = ({ tour, onTrackedChange }) => {
     const [userLocation, setUserLocation] = useState(null);
     const [tracked, setTracked] =useState(false)
     const [distance, setDistance] = useState(null)
-    const [zoomLevel, setZoomLevel] = useState(8);
 
     const onChangeDistance = (value) =>{
         setDistance(value)
@@ -40,14 +62,7 @@ const MapDetail = ({ tour, onTrackedChange }) => {
         }
     };
 
-    useEffect(() => {
-        // If userLocation is set, change zoom level
-        if (userLocation) {
-            setZoomLevel(15);
-        } else {
-            setZoomLevel(8);
-        }
-    }, [userLocation]);
+
     const destination = {
         "lat" : tour.lat,
         "long": tour.long
@@ -58,14 +73,21 @@ const MapDetail = ({ tour, onTrackedChange }) => {
         <div className={`p-3 p-md-5 map-detail   ${tracked ? 'tracked' : ''}`}>
             <button onClick={getLocation} className="mb-3 border-0 bg-none fs-14 p-2 ps-3 pe-3  w-100">{tracked ? 'Batal' : 'Lacak Lokasi Anda'}</button>
             {
-                distance !== null && (
-                    <p className="text-center">Total Jarak : <span className="fw-bold">{distance} KM</span></p>
+                tracked  && (
+                    distance !== null 
+                    ? 
+                        <p className="text-center">Total Jarak : <span className="fw-bold">{distance} KM</span></p>
+                    : 
+                        // ada loading spinner saat nunggu jarak
+                        <DistanceLoading/>
+
+
                 )
             }
             <MapContainer className="map-container"
             center={ tracked ? [userLocation.lat, userLocation.long] : [tour.lat, tour.long]}
             style={{ height: "400px", width: "100%" }}
-            zoom={zoomLevel}
+            zoom={8}
             // scrollWheelZoom={false}
             >
                 <TileLayer
