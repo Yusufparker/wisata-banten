@@ -1,39 +1,11 @@
-import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+
+import { useState } from "react";
 import "leaflet-routing-machine";
 import RoutineMachine from "./RoutineMachine";
 
-function LocationMarker() {
-    const [position, setPosition] = useState(null);
-    const [bbox, setBbox] = useState([]);
+import customMarkerIcon from "./customMakerIcon";
 
-    const map = useMap(); // Menggunakan useMap disini
-
-    useEffect(() => {
-        map.locate().on("locationfound", function (e) {
-            setPosition(e.latlng);
-            map.flyTo(e.latlng, map.getZoom());
-            const radius = e.accuracy;
-            const circle = L.circleMarker(e.latlng, { radius }); // Gunakan L.circleMarker
-            circle.addTo(map);
-            setBbox(e.bounds.toBBoxString().split(","));
-        });
-    }, [map]);
-
-    return position === null ? null : (
-        <Marker position={position}>
-        <Popup>
-            You are here. <br />
-            Map bbox: <br />
-            <b>Southwest lng</b>: {bbox[0]} <br />
-            <b>Southwest lat</b>: {bbox[1]} <br />
-            <b>Northeast lng</b>: {bbox[2]} <br />
-            <b>Northeast lat</b>: {bbox[3]}
-        </Popup>
-        </Marker>
-    );
-}
 
 const MapDetail = ({ tour, onTrackedChange }) => {
     const [userLocation, setUserLocation] = useState(null);
@@ -53,6 +25,7 @@ const MapDetail = ({ tour, onTrackedChange }) => {
                 }
             );
         }else{
+            setUserLocation(null)
             setTracked(false)
             onTrackedChange(false)
         }
@@ -76,7 +49,7 @@ const MapDetail = ({ tour, onTrackedChange }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={[tour.lat, tour.long]} key={tour.id}>
+                <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon}>
                     <Popup>
                     <div className="p-1">
                         <img src={tour.image} alt="" className="w-100" />
