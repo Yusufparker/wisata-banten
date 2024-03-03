@@ -438,6 +438,8 @@ footer .sosmed a{
 
 
 
+
+
 /* destination page */
 .destination-page .btn-more{
   background-color: rgba(255, 213, 0, 0.434);
@@ -451,9 +453,74 @@ footer .sosmed a{
   padding: 5px;
 }
 
+/* detail dest */
+.detail-destinasi{
+  margin-top: 50px;
+}
+
+.detail-destinasi .header{
+  height: 400px;
+}
+
+.detail-destinasi .header h1{
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 100;
+  top: 50%;
+  color: white;
+}
+
+.detail-destinasi .leaflet-routing-container{
+  display: none;
+}
+
+/* map detail */
 
 
+.map-detail button{
+  transition: all .5s;
+}
 
+.map-detail button:hover{
+  background-color: #0b1215 ;
+  color: white;
+  transition: all .5s;
+}
+
+.map-detail.tracked button{
+  background-color: rgba(247, 9, 9, 0.836) !important;
+  color: white;
+  width: 80% !important;
+  display: block;
+  margin: auto;
+}
+
+.map-detail.tracked{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 70px 0 0 0 !important;
+  background-color: white;
+  top: 0;
+  z-index: 100;
+  overflow: hidden;
+  margin-bottom: 0;
+  transition: all 1s;
+}
+
+.map-detail.tracked .map-container{
+  height: 100% !important;
+  transition: all 1s;
+
+}
+
+.detail-destinasi.tracked{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+    
+}
 
 /* tablet */
 @media screen and (max-width: 884px) {
@@ -479,7 +546,9 @@ footer .sosmed a{
 /* mobile */
 @media screen and (max-width: 700px){
 
-
+  .detail-destinasi .header {
+    height: 250px;
+  }
   .about-page .quotes{
     height: 250px !important;
   }

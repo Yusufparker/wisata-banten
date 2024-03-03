@@ -1,41 +1,8 @@
 import {useState, useEffect} from 'react';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import dataTour from "../utils/data_wisata.json"
 import { Link } from 'react-router-dom';
-
-
-function MapComponent({searchResults, data}) {
-    const tours = searchResults.length > 0 ? searchResults : data
-
-    return (
-        <MapContainer
-            center={[-6.4456544, 105.7077133, 9]}
-            zoom={8}
-            style={{ height: "400px", width: "100%" }}
-            zoomControl={false}
-            scrollWheelZoom={false}
-        >
-            <TileLayer
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            />
-            {
-                tours.map(tour=>(
-                    <Marker position={[tour.lat, tour.long]} key={tour.id}>
-                        <Popup>
-                            <div  className='p-1'>
-                                <img src={tour.image} alt=""  className='w-100'/>
-                            </div>
-                            <p>{tour.name}</p>
-                            <Link className='fs-12' to={`/destinasi/${tour.id}`}>Lihat Detail</Link>
-                        </Popup>
-                    </Marker>
-                ))
-            }
-        </MapContainer>
-    );
-}
+import MapComponent from '../Components/MapComponent';
 
 
 const DestinationCard = ({tour}) =>{
@@ -150,7 +117,7 @@ const Destination = () => {
                 </div>
                 {
                     count < tours.length && search.length <= 0 && (
-                        <button onClick={() => setCount(count + 5)} className='w-100 p-2 border-0 btn-more'>
+                        <button onClick={() => setCount(count + 5)} className='w-100 p-2 fs-12 border-0 btn-more'>
                             Lihat Lebih Banyak
                         </button>
                     )
