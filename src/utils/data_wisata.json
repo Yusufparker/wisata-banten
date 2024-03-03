@@ -61,23 +61,63 @@
         "long":106.3005848
     },
     {
-        "id" : "pulau-dua-25s2",
-        "name" : "Pulau Dua (Pulau Burung)",
-        "image" : "/img/5.webp",
+        "id" : "gunung-pinang-25s2",
+        "name" : "Gunung Pinang",
+        "image" : "/img/7.jpg",
         "location":"Serang",
-        "desc" : "Pulau Dua atau Pulau Burung menjadi destinasi wisata alam di Banten favorit para wisatawan karena di cagar alam seluas 30 Ha ini merupakan rumah bagi banyak burung. Setiap tahunnya, sekitar 60 jenis burung dari berbagai negara akan datang ke pulau ini, tepatnya pada bulan April hingga Agustus. Selain itu, di objek wisata di Banten ini juga terdapat berbagai macam jenis ikan laut, serta memiliki laut yang begitu indah. Untuk sampai ke destinasi wisata di Banten satu ini, kamu bisa menyewa perahu motor atau perahu tradisional. Jika kamu memilih untuk berjalan kaki sembari menikmati kelestarian alam di sekitarnya, kamu membutuhkan waktu 15 hingga 30 menit, melewati daerah pertambakan yang ada di Desa Sawah Luhur, Kasemen.",
+        "desc" : "Kunjungan ke Gunung Pinang menjadi salah satu list wisata Serang Banten dapat menjadi pilihan menarik ketika Anda ingin berlibur yang berbeda. Tempat wisata alam gunung pinang di Serang Banten ini mempunyai suasana yang segar dan sejuk. Konsep kekinian yang ditawarkan Wisata Alam Gunung Pinang membuat pengunjung betah. HomeRegional Gunung Pinang, Wisata Alam yang Menyajikan Panorama Indah di Serang Putri Anastasia Bangalino SuryanaPutri Anastasia Bangalino Suryana Diperbarui 09 Sep 2023, 17:00 WIB Copy Link 17 Piknik di Gunung Pinang Perbesar Ilustrasi Piknik Credit: pexels.com/freepik.com Liputan6.com, Serang - Gunung Pinang, terletak di perbatasan Serang dan Kota Cilegon Provinsi Banten, menjadi destinasi menarik bagi para wisatawan. Kunjungan ke Gunung Pinang menjadi salah satu list wisata Serang Banten dapat menjadi pilihan menarik ketika Anda ingin berlibur yang berbeda. Tempat wisata alam gunung pinang di Serang Banten ini mempunyai suasana yang segar dan sejuk. Konsep kekinian yang ditawarkan Wisata Alam Gunung Pinang membuat pengunjung betah. Advertisement recommended by GLUWTY Wanita 68-an asal Bandung dengan Baby Face Pakai Ini sebelum Tidur PELAJARI LEBIH Panorama alam Gunung Pinang yang luas letaknya sangat dekat sehingga tidak sulit untuk menemukannya.Tempat wisata alam gunung pinang di Serang Banten ini mempunyai suasana yang segar dan sejuk. Konsep kekinian yang ditawarkan Wisata Alam Gunung Pinang membuat pengunjung betah. Pengunjung akan disajikan panorama alam Gunung Pinang yang memikat. Wisata alam Gunung Pinang juga menjadi tempat yang tepat bagi Anda yang ingin piknik atau berolahraga.",
         "populer" : true,
-        "lat" :0,
-        "long":0
+        "lat" :-6.0605551,
+        "long":106.0802336
     },
     {
-        "id" : "pantai-sawarna-31s0",
-        "name" : "Pantai Sawarna",
-        "image" : "/img/6.jpg",
-        "location":"Lebak",
-        "desc" : "Pulau Dua atau Pulau Burung menjadi destinasi wisata alam di Banten favorit para wisatawan karena di cagar alam seluas 30 Ha ini merupakan rumah bagi banyak burung. Setiap tahunnya, sekitar 60 jenis burung dari berbagai negara akan datang ke pulau ini, tepatnya pada bulan April hingga Agustus. Selain itu, di objek wisata di Banten ini juga terdapat berbagai macam jenis ikan laut, serta memiliki laut yang begitu indah. Untuk sampai ke destinasi wisata di Banten satu ini, kamu bisa menyewa perahu motor atau perahu tradisional. Jika kamu memilih untuk berjalan kaki sembari menikmati kelestarian alam di sekitarnya, kamu membutuhkan waktu 15 hingga 30 menit, melewati daerah pertambakan yang ada di Desa Sawah Luhur, Kasemen.",
+        "id" : "pantai-sambolo-31s0",
+        "name" : "Pantai Sambolo",
+        "image" : "/img/9.jpg",
+        "location":"Serang",
+        "desc" : "Pantai Sambolo merupakan salah satu destinasi pantai favorit di wilayah Serang, Banten. Pantai ini memiliki hamparan pasir putih yang luas dan hempasan ombak yang tidak terlalu besar. Lokasinya yang strategis juga menjadi salah satu daya tarik tempat wisata ini. Tidak hanya pemandangan yang eksotis, di Pantai Sambolo kamu juga bisa menikmati berbagai macam aktivitas olahraga air seperti ATV, speed boat, parasailing, hingga jet ski.",
         "populer" : true,
-        "lat" :0,
-        "long":0
+        "lat" :-6.0987259,
+        "long":105.8610998
+    },
+    {
+        "id" : "istana-surosowan-31s0",
+        "name" : "Istana Surosowan",
+        "image" : "/img/8.jpg",
+        "location":"Serang",
+        "desc" : "Jika berkunjung ke Banten tidak pas rasanya kalau tidak mengunjungi situs-situs bersejarah. Kota yang kaya akan sejarah ini memiliki beberapa situs peninggalan jaman keraton. Salah satunya adalah Istana Surosowan yang menjadi favorit para penggemar wisata sejarah. Istana yang dibangun pada tahun 1526 ini mencerminkan masa kejayaan Kesultanan Banten pada pemerintahan Maulana Hasanudin. Kamu bisa merasakan suasana jaman Keraton sekaligus menikmati pemandangan asri di sekitar istana.",
+        "populer" : false,
+        "lat" :-6.0382005,
+        "long":106.1531602
+    },
+    {
+        "id" : "hutan-kayu-putih-kragilan-31s0",
+        "name" : "Hutan Kayu Putih Kragilan",
+        "image" : "/img/11.jpg",
+        "location":"Serang",
+        "desc" : "Salah satu destinasi wisata curug yang unik di Banten adalah Curug Leuwi Bumi atau Curug Bumi. Curug ini memiliki beberapa air terjun kecil dengan ketinggian 3 sampai 5 meter dan kedalaman yang berbeda-beda. Karena indahnya pemandangan alam di sekitar Curug Bumi, kamu dapat dengan mudah menemukan spot foto yang instagramable. Selain air yang jernih dan pemandangan yang indah, kamu juga bisa bermalam di camping ground di sekitar area curug.",
+        "populer" : false,
+        "lat" :-6.1305384,
+        "long":106.2749215
+    },
+    {
+        "id" : "situ-rawa-arum-31s0",
+        "name" : "Situ Rawa Arum",
+        "image" : "/img/12.jpg",
+        "location":"Cilegon",
+        "desc" : "Situ Rawa Arum merupakan destinasi wisata yang baru-baru ini direstorasi oleh pemerintah Cilegon. Seperti namanya, terdapat banyak bunga teratai putih di permukaan air sehingga pengunjung dapat mencium wangi semerbak dari danau ini. Sebagai satu-satunya danau di Cilegon, Situ Rawa Arum memiliki latar belakang pemandangan bukit-bukit yang eksotis serta hamparan air yang luas mencapai 10 hektare.",
+        "populer" : false,
+        "lat" :-5.9804361,
+        "long":106.0082331
+    },
+    {
+        "id" : "pantai-karang-taraje-31s0",
+        "name" : "Pantai Karang Taraje",
+        "image" : "/img/13.jpg",
+        "location":"Lebak",
+        "desc" : "Tempat wisata Banten yang yang pertama adalah Pantai Karang Taraje. Pantai Karang Taraje memiliki pemandangan karang yang menakjubkan. Meskipun berdekatan dengan pantai Legon Pari, Pantai Karang Taraje memiliki ombak yang lebih besar. Ombak besar tersebut kemudian menerjang batuan karang yang tebal dan sehingga membentuk air terjun kecil yang indah.",
+        "populer" : false,
+        "lat" :-6.9907843,
+        "long":106.3236726
     }
 ]
