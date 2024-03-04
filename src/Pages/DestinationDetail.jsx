@@ -13,12 +13,27 @@ const DestinationDetail = () => {
     // Mencari data tur berdasarkan ID
     const tour = dataTour.find(tour => tour.id ===id);
 
+
+    // rumus buat ubah ke km
+    function calculateDistanceInKm(lat1, lon1, lat2, lon2) {
+        const R = 6371; // Radius bumi dalam kilometer
+        const dLat = (lat2 - lat1) * (Math.PI / 180);
+        const dLon = (lon2 - lon1) * (Math.PI / 180); 
+        const a = 
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * 
+            Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+        const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
+        const distance = R * c; // Jarak dalam kilometer
+        return distance;
+    }
+
+
     useEffect(() => {
         const filteredPenginapan = dataPenginapan.filter((penginapan) => {
-
-          // Menggunakan rumus jarak Euclidean 
+            // Menggunakan rumus jarak Euclidean 
             const distance = Math.sqrt(
-            Math.pow(penginapan.lat - tour.lat, 2) +
+                Math.pow(penginapan.lat - tour.lat, 2) +
                 Math.pow(penginapan.long - tour.long, 2)
             );
 
@@ -27,11 +42,25 @@ const DestinationDetail = () => {
 
             return distance <= maxDistance;
         });
-        setPenginapan(filteredPenginapan);
-    },[])
+
+        // Menambahkan jarak ke setiap objek penginapan
+        const penginapanWithDistance = filteredPenginapan.map((penginapan) => {
 
 
-    // console.log(peninapan);
+            // ubah ke km buat dipake nantinya
+            const distance = calculateDistanceInKm(penginapan.lat, penginapan.long, tour.lat, tour.long);
+            return {
+                ...penginapan,
+                distance: distance
+            };
+        });
+
+        setPenginapan(penginapanWithDistance);
+    }, []);
+
+
+
+    console.log(peninapan);
 
 
     

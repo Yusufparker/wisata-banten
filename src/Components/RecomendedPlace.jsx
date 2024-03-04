@@ -16,7 +16,11 @@ const RecomendedPlace = ({penginapan}) => {
                             </div>
                             <div className="mt-3">
                                 <div>
-                                    <h6 className="fw-bold">{p.name}</h6>
+                                    <div className="d-flex  justify-content-between">
+                                        <h6 className="fw-bold">{p.name}</h6>
+                                        <span className="fs-12 fw-bold text-success">{p.distance.toFixed(2)} KM</span>
+
+                                    </div>
                                     {
                                         p.harga <= 0 ?
                                             <p className="fs-14">Harga tidak diketahui</p>
