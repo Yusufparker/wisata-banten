@@ -1,0 +1,119 @@
+[
+    {
+        "id" : "sunset-view-hote-agusta-group-123",
+        "name" : "Sunset View Hotel by Augusta group",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipOyKOpOxBZCLWPvl-7dO5tF9nlzbr-JWRy6Jzn3=w408-h306-k-no",
+        "lat" : -6.293900944563488,
+        "long" : 105.83695714814732,
+        "harga" : 239000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "paniisan-hotel-123",
+        "name" : "Paniisan Hotel",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipNwFiikdJE7pPwa8gKK5UIos6K0ofKGrfj7Smtj=w426-h240-k-no",
+        "lat" : -6.294051091940222,
+        "long" :  105.83729920886039,
+        "harga" : 234000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "HOTEL-RAKATA-123",
+        "name" : "HOTEL RAKATA",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipOR1ed0Zls740nn7CL95jCF4kNwj5hhDINF3_nq=w426-h240-k-no",
+        "lat" : -6.307153015781356, 
+        "long" :   105.84153756447496,
+        "harga" : 171000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "8988-Beach-Resort-Banten",
+        "name" : "8988 Beach Resort, Ujung Kulon, Banten",
+        "image" : "https://lh3.googleusercontent.com/gps-proxy/ALd4DhGbY-H26X0FlF6lBhOCwtVHqaMRn8_N-zfdFvel9uTL0OFN2aoWU34VnPDEM0Tpluox6lE5kjPLKGHfR2NMrld8oyFdUw_2dcq-Dw07yd9jIl_brG1CkgBaxfZgTkrMlUJwxzt9mL0_2NSqZK0vBfQhDuvFKTfOsiLLVsbXFhnlgxTj5rEXqlGQsQ=w408-h408-k-no",
+        "lat" : -6.663181055895744, 
+        "long" :   105.55448612376142,
+        "harga" : 1250000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "villa-serenity-beach-tanjung-lesung",
+        "name" : "Villa Serenity Beach Tanjung Lesung",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPrW6DduDicsR1IOLZ1IKtX864nO38XxsgVWvud=w408-h544-k-no",
+        "lat" : -6.527945907705668, 
+        "long" :   105.60537975642019,
+        "harga" : 499000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "Posco-E-C-Hotel",
+        "name" : "Posco E & C Hotel",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPqozm2GHHEr7OWUqk7u-cMRbkk4mbKkdg0SKur=w408-h306-k-no",
+        "lat" : -6.0334872702534526, 
+        "long" :   106.09699829384304,
+        "harga" : 388000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "greenotel-cilegon",
+        "name" : "Greenotel Cilegon",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPaePfEh7127jF1A8Gw_ktEWiyIw4HQUxsMRwlw=w408-h324-k-no",
+        "lat" : -6.02222026167793, 
+        "long" :   106.08360870661411,
+        "harga" : 445000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "pondok-raphael-guesthouse",
+        "name" : "Pondok Raphael Guesthouse",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPq52LUrRORQQmpV1xZX-jAmHSb8j-oNmbTd2rf=w408-h406-k-no",
+        "lat" : -6.032740411389075,  
+        "long" :   106.07522964289015,
+        "harga" : 361000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "horison-rahaya-resort",
+        "name" : "Horison Rahaya Resort",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPPw8n487heeTjDrUrtiEed8qo82JG6N282rrCg=w426-h240-k-no",
+        "lat" : -6.58493434606411, 
+        "long" :   106.22567278807601,
+        "harga" : 0,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "base-camp-CUKAS",
+        "name" : "Base camp (CUKAS)",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipPH1a0pe7JXAyk7weMgiSA6esHbJPTKgBzH5M_3=w408-h725-k-no",
+        "lat" : -6.591073349045957,  
+        "long" :   106.20541674585793,
+        "harga" : 0,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "villa-mutiara-sawarna",
+        "name" : "Villa Mutiara Sawarna",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipNsHlLH8D32HF2L2VRFHADkucLbGcNbwng0DNLT=w500-h240-k-no",
+        "lat" : -6.977280403904701, 
+        "long" :   106.30725996458213,
+        "harga" : 273000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "andra-homestay",
+        "name" : "Andra Homestay",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipNDL0PtM7_esY_rd_UE0xLULDVmrObROlIELw=w408-h306-k-no",
+        "lat" : -6.980168565916732, 
+        "long" :  106.31048681146952,
+        "harga" : 728000,
+        "contact" : "6282111563925"
+    },
+    {
+        "id" : "homestay-penginapan-sawarna-ndah",
+        "name" : "Homestay & Penginapan Sawarna Indah",
+        "image" : "https://lh5.googleusercontent.com/p/AF1QipNeCq4zG7UI8cSF6zIvKy9usETsyzAMq6BfmGjl=w408-h539-k-no",
+        "lat" : -6.982099649245345, 
+        "long" :  106.30717531038071,
+        "harga" : 230000,
+        "contact" : "6282111563925"
+    }
+]

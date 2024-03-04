@@ -20,7 +20,7 @@ const createRoutineMachineLayer = (props) => {
         showAlternatives: true,
         createMarker: function (i, waypoint, n) {
             return L.marker(waypoint.latLng, {
-                icon: customMarkerIcon
+                icon: customMarkerIcon['destination']
             });
         }
     });

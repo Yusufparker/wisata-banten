@@ -30,7 +30,7 @@ const DistanceLoading = () =>{
 
 
 
-const MapDetail = ({ tour, onTrackedChange }) => {
+const MapDetail = ({ tour, onTrackedChange, penginapan }) => {
     const [userLocation, setUserLocation] = useState(null);
     const [tracked, setTracked] =useState(false)
     const [distance, setDistance] = useState(null)
@@ -94,7 +94,7 @@ const MapDetail = ({ tour, onTrackedChange }) => {
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon}>
+                <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon['destination']}>
                     <Popup>
                     <div className="p-1">
                         <img src={tour.image} alt="" className="w-100" />
@@ -102,6 +102,19 @@ const MapDetail = ({ tour, onTrackedChange }) => {
                     <p>{tour.name}</p>
                     </Popup>
                 </Marker>
+
+                {
+                    penginapan.map(p => (
+                        <Marker position={[p.lat, p.long]} key={p.id} icon={customMarkerIcon['hotel']}>
+                            <Popup>
+                            <div className="p-1">
+                                <img src={p.image} alt="" className="w-100" />
+                            </div>
+                            <p>{p.name}</p>
+                            </Popup>
+                        </Marker>
+                    ))
+                }
 
                 {/* tracking ke destinasi tujuan */}
                 {

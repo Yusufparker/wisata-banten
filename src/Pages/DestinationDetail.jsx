@@ -1,15 +1,41 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import dataTour from "../utils/data_wisata.json";
+import dataPenginapan from "../utils/data_penginapan.json"
 import MapDetail from "../Components/MapDetail";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import RecomendedPlace from "../Components/RecomendedPlace";
 
 const DestinationDetail = () => {
     const [tracked, setTracked] = useState(false);
     const { id } = useParams();
-
+    const [peninapan, setPenginapan] = useState([])
+    
     // Mencari data tur berdasarkan ID
     const tour = dataTour.find(tour => tour.id ===id);
 
+    useEffect(() => {
+        const filteredPenginapan = dataPenginapan.filter((penginapan) => {
+
+          // Menggunakan rumus jarak Euclidean 
+            const distance = Math.sqrt(
+            Math.pow(penginapan.lat - tour.lat, 2) +
+                Math.pow(penginapan.long - tour.long, 2)
+            );
+
+            // Menetapkan jarak maksimum yang diperbolehkan
+            const maxDistance = 0.35;
+
+            return distance <= maxDistance;
+        });
+        setPenginapan(filteredPenginapan);
+    },[])
+
+
+    // console.log(peninapan);
+
+
+    
+    const isiPesan = `Halo kak, saya ingin mengetahui info mengenai wisata di ${tour.name}`
     if (!tour) {
         return <div>Tur tidak ditemuka lorem100</div>;
     }
@@ -24,12 +50,13 @@ const DestinationDetail = () => {
                 <img src={tour.image} className="w-100" alt="" />
                 <h1 className="fw-bold position-absolute text-center text-shadow-lg">{tour.name}</h1>
             </div>
-            <div className="container mt-5 mb-5 ">
+            <div className="container mt-5 mb-2 ">
                 <div className="row">
                     <div className="col-md-6 order-md-2 d-flex align-items-center">
                         <div>
                             <h1 className="mb-5"><i className="bi bi-geo-alt-fill text-danger"></i> {tour.location} -  Banten</h1>
                             <p className="fs-14">{tour.desc}</p>
+                            <Link to={`https://wa.me/${tour.contact}?text=${isiPesan}`} target="_blank" className="fs-14  mt-3 mb-5 rounded-0 text-white btn btn-warning p-2 ps-3 pe-3 d-inline-block"><i className="bi bi-whatsapp"></i> Hubungi Admin</Link>
                         </div>
                     </div>
                     <div className="col-md-6 order-md-1">
@@ -38,7 +65,10 @@ const DestinationDetail = () => {
                 </div>
             </div>
 
-            <MapDetail tour={tour} onTrackedChange={handleTrackedChange} />
+
+            <MapDetail tour={tour} onTrackedChange={handleTrackedChange} penginapan={peninapan} />
+            <hr />
+            <RecomendedPlace penginapan={peninapan} />
 
         </div>
     );

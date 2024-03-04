@@ -19,7 +19,7 @@ function MapComponent({searchResults, data}) {
             />
             {
                 tours.map(tour=>(
-                    <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon}>
+                    <Marker position={[tour.lat, tour.long]} key={tour.id} icon={customMarkerIcon['destination']}>
                         <Popup>
                             <div  className='p-1'>
                                 <img src={tour.image} alt=""  className='w-100'/>
