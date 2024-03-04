@@ -32,7 +32,7 @@ const About = () => {
             <div className="mt-5  p-5 pe-3 ps-3 ">
                 <div className="container ">
                     <div className="row">
-                        <div className="col-md-6 fs-14 d-flex justify-content-center align-items-center">
+                        <div className="col-md-6  d-flex justify-content-center align-items-center">
                             <div> 
                                 <p className="mb-5">Pantai Sawarna  menjadi destinasi favorit bagi wisatawan yang ingin menikmati keindahan alam Banten. Di sini, Anda dapat menikmati pasir  yang lembut, ombak yang tenang, serta panorama matahari terbenam yang memukau.</p>
                                 <p className="mb-5">Sesampainya di pantai, Anda akan disambut oleh pasir putih yang lembut di kaki Anda. Ombak yang tenang membelai pantai, menciptakan suasana yang tenang dan menenangkan. Salah satu hal yang paling dinantikan oleh pengunjung adalah menyaksikan matahari terbenam di ufuk barat, menciptakan palet warna yang memukau di langit.</p>
