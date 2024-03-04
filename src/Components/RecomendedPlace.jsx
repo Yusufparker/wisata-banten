@@ -12,7 +12,7 @@ const RecomendedPlace = ({penginapan}) => {
                     penginapan.map(p => (
                         <div className="col-md-4 mb-5" key={p.id}>
                             <div style={{height:"300px"}} className="overflow-hidden ">
-                                <img src={p.image} alt={p.name} className="h-100" />
+                                <img src={p.image} alt={p.name} className="h-100 w-100" />
                             </div>
                             <div className="mt-3">
                                 <div>
